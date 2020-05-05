@@ -1,0 +1,51 @@
+{% extends "templateAdmin.html.twig" %}
+
+{% block title %} updateBlogPost{% endblock %}
+
+{% block content %}
+
+
+<form action="/updatePost" method="POST" style="margin: 30px;">
+  <input type='hidden' name='blogPostId' value={{blogPost.GetId()}} />
+  <div class="form-group">
+    <label for="titreBlogPost">Titre</label>
+    <input type="text" class="form-control" id="titreBlogPost" name="titreBlogPost" aria-describedby="Titre"
+      value={{blogPost.getTitre()}}>
+  </div>
+
+
+  <div class="form-group">
+    <label for="titreBlogPost">chapo</label>
+    <input type="text" class="form-control" id="chapo" name="chapo" aria-describedby="chapo"
+      value={{blogPost.GetChapo()}}>
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="titreBlogPost">Auteur</label>
+    <input type="text" class="form-control" id="Auteur" name="Auteur" aria-describedby="Auteur"
+      value={{blogPost.GetAuteur()}}>
+  </div>
+
+  <div class="form-group">
+    <label for="titreBlogPost">lienBlogPost</label>
+    <input type="text" class="form-control" id="lienBlogPost" name="lienBlogPost" aria-describedby="Auteur"
+      value={{blogPost.GetlienBlogPost()}}>
+  </div>
+
+  <div class="form-group">
+    <label for="titreBlogPost">contenu</label>
+    <textarea class="form-control" id="Content" name="Content" aria-describedby="Content" rows="4" cols="50">  {{blogPost.GetContent()}}
+      </textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Mettre à jour</button>
+</form>
+
+
+
+
+
+
+{% endblock %}

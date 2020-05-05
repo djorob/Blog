@@ -1,0 +1,51 @@
+
+{% extends "templateAdmin.html.twig" %}
+
+{% block title %}Insert Blog{% endblock %}
+
+{% block content %}
+
+<form action="insertPost" method="POST" style="margin: 30px;">
+  <div class="form-group">
+    <label for="titreBlogPost">Titre</label>
+    <input type="text" class="form-control" id="titreBlogPost" name="titreBlogPost" aria-describedby="Titre"
+      placeholder="Enter Titre">
+  </div>
+
+  <div class="form-group">
+    <label for="chapoBlogPost">chapo</label>
+    <input type="text" class="form-control" id="chapoBlogPost" name="chapoBlogPost" aria-describedby="chapoHelp"
+      placeholder="Enter chapo">
+  </div>
+
+
+  <div class="form-group">
+    <label for="contenuBlogPost">Contenu</label>
+    <textarea class="form-control" id="contenuBlogPost" name="ContenuBlogPost" rows="3"></textarea>
+
+  </div>
+
+
+  <div class="form-group">
+    <label for="AuteurBlogPost">Auteur</label>
+    <input type="text" class="form-control" id="AuteurBlogPost" name="AuteurBlogPost" aria-describedby="AuteurBlogPost"
+      placeholder="Enter Auteur">
+  </div>
+
+
+  <div class="form-group">
+    <label for="LienBlogPOst">lienBlogPost</label>
+    <input type="text" class="form-control" id="LienBlogPost" name="LienBlogPost" aria-describedby="LienBlogPOst"
+      placeholder="Enter email">
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+
+
+{% endblock %}
+
+
+

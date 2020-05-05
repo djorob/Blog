@@ -1,0 +1,60 @@
+    {% extends "templateAdmin.html.twig" %}
+
+    {% block title %}ValiderCommentaires{% endblock %}
+
+    {% block content %}
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Crée le </th>
+      <th scope="col">Titre de l'article</th>
+      <th scope="col">Nom utilisateur</th>
+      <th scope="col">Commentaire</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {% for comment in commentnotvalidated %}
+    {% for c in comment %}
+
+    <tr>
+      <td>{{c.id}}</td>
+      <td> {{c.dateCreation|date }}</td>
+      <td>{{c.titre}}</td>
+      <td>{{c.usernom}}</td>
+      <td>{{c.comment|raw}}</td>
+
+
+
+      <td> <a href="/valide/id/{{c.id}}"><span class="material-icons">
+            thumb_up_alt
+          </span></a>
+        <a href="/Invalide/id/{{c.id}}"><span class="material-icons">
+            delete
+          </span></a>
+      </td>
+
+
+
+
+      {% else %}
+      <p> il n'y a pas encore de commentaires </p>
+
+
+
+
+      {% endfor %}
+      {% endfor %}
+
+
+
+      </tbody>
+      </table>
+
+      {% endblock %}

@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Blog\\": "src/"
+           
+        }
+    },
+    "require": {
+        "erusev/parsedown": "^1.7",
+        "twig/twig": "^1.42"
+    }
+}

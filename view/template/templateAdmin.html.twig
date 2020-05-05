@@ -1,0 +1,157 @@
+  <!DOCTYPE html>
+  <html lang="fr">
+
+
+  <head>
+
+    {% block head %}
+    <meta charset="utf-8" />
+    <title><?= $title ?></title>
+    <!-- Custom fonts for this theme -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css " rel="stylesheet"
+      type="text/css">
+    <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+    <!-- Theme CSS -->
+    <link href="assets/css/freelancer.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+
+
+    {% endblock %}
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="http://localhost:8888/blog">Mon blog</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <p class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " style= "color: white"> welcome {{userName}}</p>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="margin-top: 200px;">
+
+
+      <!--<img class="img-fluid" src="images/rocher.jpg" alt="rocher" width="900px;"> -->
+      <div class="d-flex justify-content-end" style="margin-bottom :50px;">
+        <a class="btn btn-primary btn-lg active" style="margin-right :50px;" href="/insert"> ajouter
+          un article</a>
+        <a class="btn btn-primary btn-lg active" style="margin-right :50px;" href="/ValiderCommentaires"> valider les
+          commentaires</a>
+          <a class="btn btn-primary btn-lg active" href="/listUser"> Liste des utilisateurs
+                      </a>
+         
+
+      </div>
+
+      <div id="content">{% block content %}{% endblock %}</div>
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <div id="footer">
+      {% block footer %}
+
+      <footer class="footer text-center">
+        <div class="container">
+          <div class="row">
+
+            <!-- Footer Location -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h4 class="text-uppercase mb-4">Location</h4>
+              <p class="lead mb-0">Paris
+                <br>75000</p>
+            </div>
+
+            <!-- Footer Social Icons -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h4 class="text-uppercase mb-4">Around the Web</h4>
+              <a class="btn btn-outline-light btn-social mx-1" href="#">
+                <i class="fab fa-fw fa-facebook-f"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social mx-1" href="#">
+                <i class="fab fa-fw fa-twitter"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social mx-1" href="#">
+                <i class="fab fa-fw fa-linkedin-in"></i>
+              </a>
+              <a class="btn btn-outline-light btn-social mx-1" href="#">
+                <i class="fab fa-fw fa-dribbble"></i>
+              </a>
+            </div>
+
+            <!-- Footer About Text -->
+            <div class="col-lg-4">
+              <h4 class="text-uppercase mb-4">About Me</h4>
+              <p class="lead mb-0">Enthusiastic Junior Web Developer with a demonstrated history of working in social media marketing, project administration, sales. After 5 years in the Insurance and Customer Service Industry, I found my passion as a web developer ! I completed a digital marketing course and discovered that I enjoyed technology. This prompted a major career pivot.
+                <a href="https://github.com/djorob">mon lien github</a>.</p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+      <!-- Copyright Section -->
+      <section class="copyright py-4 text-center text-white">
+        <div class="container">
+          <small>Copyright Djorry</small>
+        </div>
+      </section>
+
+      {% endblock %}
+    </div>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
+    </script>
+    <!-- Custom scripts for this template -->
+    <script src="assets/js/freelancer.min.js"></script>
+  </body>
+
+  </html>
+
+
+

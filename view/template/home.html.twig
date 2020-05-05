@@ -1,0 +1,78 @@
+{% extends "template.html.twig" %}
+
+{% block title %}Blog Admin{% endblock %}
+
+{% block content %}
+<!-- Masthead-->
+<div class="container-fluid" style="width:1200px">
+
+
+</div>
+
+<div class="container">
+
+  <!-- Portfolio Section Heading -->
+  <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">liste  des articles</h3>
+
+  <!-- Icon Divider -->
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+      <i class="fas fa-star"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+  </div>
+
+  <!-- Portfolio Grid Items -->
+  <div class="row">
+
+
+
+
+
+    {% for post in  allBlogPost   %}
+    {% for p in post %}
+
+    <!-- Portfolio Item 1 -->
+    <div class="col-md-6 col-lg-4 ">
+      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+          <div class="portfolio-item-caption-content text-center text-white">
+
+          </div>
+        </div>
+        <div class="img-thumbnail " style="padding: 50px">
+          <a href='/blogid/id/{{p.GetId()}}'>
+            <img class="img-fluid" src="./assets/images/rocher.jpg" alt="rocher" width="300px;">
+          </a>
+
+
+          <h6>{{p.getTitre()}}</h6>
+          <h6>{{p.getAuteur()}}</h6>
+
+
+
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <h1>
+
+
+    </h1>
+    {% endfor %}
+    {% endfor %}
+
+
+  </div>
+
+  {% endblock %}
+
+
+

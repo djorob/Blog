@@ -1,0 +1,47 @@
+  {% extends "template.html.twig" %}
+
+  {% block title %}registerUser{% endblock %}
+
+  {% block content %}
+
+
+
+  <form action="registerUserPost" method="post">
+
+    <div class="form-group">
+      <label  for="UserName">Name</label>
+      <input type="text" class="form-control" id="UserName" name="UserName" placeholder="Jane Doe">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="MotdePasse">Password</label>
+
+      <input type="password" class="form-control" id="MotdePasse" name="MotdePasse" placeholder="Jane Doe">
+    </div>
+
+    <div class="form-group ">
+      <label for="UserSurname">Surname</label>
+      <input type="text" class="form-control" id="UserSurname" name="UserSurname" placeholder="Jane Doe">
+
+    </div>
+
+    <div class="form-group ">
+      <label  for="inlineFormInputGroupUsername">Email</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="UserEmail" name="UserEmail" placeholder="Username">
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+  </form>
+
+  {% endblock %}

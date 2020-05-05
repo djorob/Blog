@@ -1,0 +1,56 @@
+{% extends "templateAdmin.html.twig" %}
+
+    {% block title %}Liste des utilisateurs{% endblock %}
+
+    {% block content %}
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Email</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+   
+     {% for u in allUser %} 
+     <tr>
+     <th>{{u.id}}</th>
+    
+    <td>{{u.nom}}</td>
+    <td>{{u.prenom}}</td>
+    <td>{{u.email}}</td> 
+   
+   <td> <a href="/deleteUser/id/{{u.id}}"> <span class="material-icons">
+delete
+</span>
+</a></td> 
+         
+      </tr>
+    {% endfor %}
+
+    
+    
+      
+
+    
+  </tbody>
+</table>
+
+
+    
+
+   
+
+  {% endblock %}
+
+
+
+
+
+
+     

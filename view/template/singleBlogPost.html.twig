@@ -1,0 +1,83 @@
+  {% extends "templateAdmin.html.twig" %}
+
+  {% block title %}Insert Blog{% endblock %}
+
+  {% block content %}
+  <!-- <div class="d-flex justify-content-start">
+  <button type="button" class="btn btn-primary btn-lg">se deconnecter</button>
+  </div> -->
+  <!--  CECI SERA LA VUE DU BLOGPOST PRINCIPAL  -->
+<a class="btn btn-primary btn-lg"  href='/update/id/{{ blogPost.GetId() }}'> Mettre à jour </a>
+
+  <div>
+
+    <h1 class="display-4 jumbotron">{{blogPost.getTitre()}}</h1>
+    <h2> {{blogPost.getChapo()}}</h2>
+    <h3> {{blogPost.getDateCreation()}}</h3>
+    <h2>{{blogPost.GetAuteur()}}</h2>
+    <p class="lead">{{blogPost.getContent()}}</p>
+    <hr class="my-4">
+
+    <form action="/ajouterCommentaire" method="POST">
+      <div class="form-group">
+        <input type="hidden" id="blogPostid" name="blogPostid" value="{{ blogPost.GetId() }}" />
+
+        <label for="contentComment">COMMENTAIRES</label>
+        <textarea class="form-control" id="contentComment" name="contentComment" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit">Commenter</button>
+    </form>
+
+   
+
+
+
+
+
+      <!-- CECI EST LA SECTION OU ON VOIT LES  COMMENTAIRES  -->
+<div class="container">
+  
+    
+    
+  
+
+      {% for commentarray in  commentaireDuBlogPost   %}
+      {% for comment in commentarray  %}
+<div class="row m-5">
+      <div class="col-sm-2">
+          <a href="#" class="pull-left">
+              <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+          </a>
+      </div>
+
+      <div class="col-sm-10">
+          <span class="text-muted pull-right">
+              {{ comment.GetAuteur() }}
+          </span>
+          <strong class="text-success">{{ comment.GetAuteur() }}</strong>
+          <p>
+              {{ comment.GetComment() }}
+          </p>
+      </div>
+
+
+
+
+      <hr>
+</div>
+
+      {% endfor %}
+      {% endfor %}
+
+      </div>
+      
+      
+
+      {% endblock %}
+
+  
+
+
+
+
+

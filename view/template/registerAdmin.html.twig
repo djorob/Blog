@@ -1,0 +1,97 @@
+  {% extends "template.html.twig" %}
+
+  {% block title %}registerAdmin{% endblock %}
+
+  {% block content %}
+
+
+  <form action="registerAdminPost" method="post">
+    <div class="form-row align-items-center" class="d-flex flex-column bd-highlight mb-3">
+      <div class="col-sm-3 my-1">
+        <h6> Name</h6>
+        <label class="sr-only" for="inlineFormInputName">Name</label>
+        <input type="text" class="form-control" id="adminName" name="adminName" placeholder="Jane Doe">
+      </div>
+
+      <div class="col-sm-3 my-1">
+        <h6> Surname</h6>
+        <label class="sr-only" for="inlineFormInputName">Surname</label>
+        <input type="text" class="form-control" id="adminSurname" name="adminSurname" placeholder="Jane Doe">
+      </div>
+
+      <div class="col-sm-3 my-1">
+        <h6> Email</h6>
+        <label class="sr-only" for="inlineFormInputGroupUsername">Email</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="adminEmail" name="adminEmail" placeholder="Username">
+        </div>
+      </div>
+
+      <div class="col-sm-3 my-1">
+        <h6> Mot de passe</h6>
+        <label class="sr-only" for="inlineFormInputName">MotdePasse</label>
+        <input type="text" class="form-control" id="MotdePasse" name="MotdePasse" placeholder="Jane Doe">
+      </div>
+
+      <div class="col-sm-3 my-1">
+        <h6> lien CV</h6>
+        <label class="sr-only" for="inlineFormInputName">lien CV</label>
+        <input type="text" class="form-control" id="lienCv" name="lienCv" placeholder="Jane Doe">
+      </div>
+
+      <div class="col-sm-3 my-1">
+        <h6> Accroche</h6>
+        <label class="sr-only" for="inlineFormInputName">Accroche</label>
+        <input type="text" class="form-control" id="adminAccroche" name="adminAccroche" placeholder="Jane Doe">
+      </div>
+
+
+      <div class="col-sm-3 my-1">
+        <h6> Lien Github</h6>
+        <label class="sr-only" for="inlineFormInputName">lien Github</label>
+        <input type="text" class="form-control" id="Github" name="Github" placeholder="Jane Doe">
+      </div>
+
+
+      <div class="col-sm-3 my-1">
+        <h6> Lien Github</h6>
+        <label class="sr-only" for="inlineFormInputName">lien Github</label>
+        <input type="text" class="form-control" id="Github" name="Github" placeholder="Jane Doe">
+      </div>
+
+
+
+      <div class="col-sm-3 my-1">
+        <h6> lien Linkedin</h6>
+        <label class="sr-only" for="inlineFormInputName">lien Linkedin</label>
+        <input type="text" class="form-control" id="lienLinkedin" name="lienLinkedin" placeholder="Jane Doe">
+      </div>
+
+
+      <div class="col-sm-3 my-1">
+        <h6> lien Twitter</h6>
+        <label class="sr-only" for="inlineFormInputName">lien Twitter</label>
+        <input type="text" class="form-control" id="lienTwitter" name="lienTwitter" placeholder="Jane Doe">
+      </div>
+
+
+      <div class="col-sm-3 my-1">
+        <h6>lien Facebook</h6>
+        <label class="sr-only" for="inlineFormInputName">lien Facebook</label>
+        <input type="text" class="form-control" id="lienFacebook" name="lienFacebook" placeholder="Jane Doe">
+      </div>
+
+
+
+
+
+
+
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+
+
+  {% endblock %}
